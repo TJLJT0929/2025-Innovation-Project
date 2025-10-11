@@ -1,69 +1,97 @@
 \section{Recent Developments in Dynamic Pricing Research: Multiple	Products, Competition, and Limited Demand	Information}
 
-\textbf{作者：} Ming Chen  \%  Zhi-Long Chen
+\textbf{作者：} Ming Chen  \&  Zhi-Long Chen
 
 \textbf{来源：} POM, 2015
 
 
 \subsection{引言}\label{introduction}
 
-动态定价是收益管理的核心工具之一，通过匹配供需、响应需求变化和实现客户细分以提升收益。自航空业早期应用成功后，已扩展至酒店、租车、邮轮、娱乐及零售等行业。
-
-收益管理中的动态定价通常具备三个特征：
+动态定价是收益管理的核心工具之一，通过匹配供需、响应需求变化和实现客户细分以提升收益。早期从航空业应用成功后，已拓展到酒店、租车、邮轮、娱乐及零售等行业。动态定价通常具备三个特征：
 \begin{itemize}
-	\item 存在有限的销售季，产品具有时效性（如航班座位或时尚品）；
+	\item 有限的销售季，产品具有时效性（如航班座位或时尚品）；
 	\item 初始库存固定且不可补充；
 	\item 定价是动态的，可在不同时期调整价格。
 \end{itemize}
 
-近二十年来，动态定价的成功实践推动了学术研究的快速增长。本文聚焦于具有上述特征的三类新兴问题：多产品定价、竞争性定价和有限信息下的定价。其他类型的问题（如可补充库存、无限销售季或无限库存）因与收益管理关联较弱，不予综述。但若与主题紧密相关，也可能酌情纳入。
+近二十年来，动态定价的成功应用促进了研究兴趣增长。本文聚焦于具有上述特征的三类新兴问题：多产品定价、竞争性定价和有限信息下的定价。其他类型的问题（如可补充库存、无限销售季或无限库存）与收益管理关联较弱，不予综述。
 
 \subsubsection{主要趋势}\label{major-trends}
 
-收益管理中的动态定价研究始于约二十年前，近七八年呈现爆发式增长。2006年是重要转折点：此前研究多基于四个理想化假设：
+收益管理中的动态定价研究始于约二十年前，早期 2006 年是重要转折点：在这之前研究一般基于四个理想化假设：
 \begin{enumerate}
 	\def\labelenumi{\roman{enumi}.}
-	\item 单一产品；
-	\item 垄断市场；
-	\item 短视客户（即根据当前价格立即决定购买）；
-	\item 需求信息完全（分布已知）。
+	\item 单一产品
+	\item 垄断市场
+	\item 短视客户（即根据当前价格立即决定购买）
+	\item 需求信息完全（分布已知）
 \end{enumerate}
 
-实践中，企业常销售多种产品（存在替代或互补关系），忽略产品间需求相关性将导致次优定价。此外，许多市场存在竞争，需采用博弈论方法建模。客户也常具有策略性，会等待降价，此时需求不仅取决于当前价格。而销售季节短、历史数据少，导致需求信息往往有限。
+但是实际上这些假设过于理想：
+\begin{itemize}
+	\item 企业经常销售多种产品（存在替代、互补关系），忽略产品间需求相关性将导致次优定价
+	\item 市场存在竞争，需采用博弈论方法建模
+	\item 许多客户也常具有策略性，会等待降价，此时需求不仅取决于当前价格
+	\item 销售季节短、历史数据少，导致需求信息往往有限
+\end{itemize}
 
-自2006年起，学者开始大量关注多产品、竞争环境、策略型客户及有限信息下的动态定价问题，形成了多个文献分支。
-
-现有综述如 Elmaghraby and Keskinocak (2003), Chan et al. (2004), Bitran and Caldentey (2003), Shen and Su (2007), Aviv et al. (2009) 已覆盖了早期成果，但较少涉及多产品、竞争及有限信息的问题。本文旨在填补这一空白，对这三类新兴问题进行系统综述，并指出未来研究方向。
+所以从 2006 年开始，学者开始大量关注多产品、竞争环境、策略型客户及有限信息下的动态定价问题，形成了很多分支领域。
 
 \subsubsection{术语}\label{terminology}
 
-动态定价模型通常涉及以下组件：
+动态定价模型通常涉及以下要素：
 
 \begin{itemize}
-	\item \textbf{时间范围}：分为（i）连续时间（价格可随时调整，常被离散化）；（ii）离散时间段（价格定期调整）；（iii）基于客户到达（价格在客户到达时调整）。
-	\item \textbf{允许价格}：分为连续价格（任意值）或离散价格（取自有限集合）。
-	\item \textbf{定价方案}：分为预公告定价（全程价格事先确定）或或有定价（根据销售动态调整）。在短视客户无竞争时，或有定价更优；但在策略型客户或竞争环境下，预公告定价可能更有利。
+	\item \textbf{时间范围}：
+	\begin{itemize}
+		\item 连续时间：价格可随时调整，常被离散化处理
+		\item 离散时间：价格定期调整
+		\item 基于客户到达：价格在客户到达时调整
+	\end{itemize}
+	
+	\item \textbf{允许价格}：
+	\begin{itemize}
+		\item 连续价格：任意值）
+		\item 离散价格：取自有限集合
+	\end{itemize}
+	\item \textbf{定价方案}：
+	\begin{itemize}
+		\item 预公告定价：全程价格事先确定。策略型客户或竞争环境下，预公告定价可能更有利
+		\item 应变定价：根据销售动态调整。在短视客户无竞争时，或有定价更优
+	\end{itemize}
+	
 \end{itemize}
-
-下文将结合具体问题类别讨论需求建模方法。
 
 \subsection{多产品模型}\label{models-with-multiple-products}
 
-Gallego and van Ryzin (1997) 是首篇研究多产品动态定价的开创性论文。该领域文献可根据销售机制分为两类：无后续行动模型（客户购买决定为最终决策）和有后续行动模型（公司利用初始购买信息进行升级销售、增销或交叉销售）。下文将分别在2.1节和2.2节综述这两类模型。
+Gallego and van Ryzin (1997) 是第一篇研究多产品动态定价的论文。这个方向文献根据销售机制分为两类：
+
+\begin{itemize}
+	\item 无后续行动（without-follow-up）：客户购买决定为最终决策
+	\item 有后续行动（with-follow-up）：公司利用初始购买信息进行升级销售、增销或交叉销售
+\end{itemize}
 
 \subsubsection{无后续行动}\label{without-follow-up}
 
-现有文献主要围绕产品间关系（可替代、一般、独立）、需求模型（确定性、随机、有限信息）及客户类型（短视、策略型）展开。多数研究采用随机需求模型，尤以泊松过程建模客户到达为主，可分为一般泊松（GP）模型和包含消费者选择（PCC）的泊松模型。
+已有文献主要围绕以下方面展开：
+\begin{itemize}
+	\item 产品间关系（一般、可替代、独立）
+	\item 需求模型（确定性、随机、有限信息）
+	\item 客户类型（短视、策略型）
+\end{itemize}
 
-关键结构性质包括：
-- PQ：更高质量产品定价更高；
-- PT：产品价格随剩余时间非递减；
-- PI：产品价格随自身库存非递增；
-- PJ：产品价格随他产品库存非递增。
 
-\textbf{一般产品关系：} Gallego and van Ryzin (1997), Maglaras and Meissner (2006), Koenig and Meissner (2010) 使用GP模型，基于确定性解提出渐近最优启发式算法。Bulut et al. (2009) 采用PCC模型，表明负相关保留价格下，中期提供捆绑包能有效增加收入。
+大部分研究采用随机需求模型，特别是 Poisson 过程建模客户到达为主，可分为一般泊松（GP）模型和包含消费者选择（PCC）的 Poisson 模型。这类模型推导出来的最优定价策略通常具有以下关键结构性质：
+\begin{itemize}
+	\item PQ：更高质量产品定价更高
+	\item PT：产品价格随时间非递减
+	\item PI：产品价格随自身库存非递增
+	\item PJ：产品价格随其他产品库存非递增
+\end{itemize}
 
-\textbf{可替代与横向差异化产品：} 多数采用PCC模型并结合随机效用理论（如MNL、NL模型）刻画消费者选择。Akcay et al. (2010), Dong et al. (2009), Suh and Aydin (2011) 等发现，库存稀缺性与质量差异相互作用导致复杂价格行为，单产品的单调性质（PT, PJ）在多产品设置中未必成立。Li and Huh (2011) 与 Gallego and Wang (2012) 采用更一般的NL模型，揭示了调整后加价的恒等性质。Zhang and Cooper (2009) 表明固定统一定价会导致显著收入损失。
+\textbf{一般产品关系：} Gallego and van Ryzin (1997), Maglaras and Meissner (2006), Koenig and Meissner (2010) 使用 GP 模型，基于确定性解提出渐近最优启发式算法。Bulut et al. (2009) 采用 PCC 模型，表明负相关保留价格下，中期提供捆绑包能有效增加收入。
+
+\textbf{可替代与横向差异化产品：} 多数采用 PCC 模型并结合随机效用理论（如 MNL、NL模型）刻画消费者选择。Akcay et al. (2010), Dong et al. (2009), Suh and Aydin (2011) 等发现，库存稀缺性与质量差异相互作用导致复杂价格行为，单产品的单调性质（PT, PJ）在多产品设置中未必成立。Li and Huh (2011) 与 Gallego and Wang (2012) 采用更一般的NL模型，揭示了调整后加价的恒等性质。Zhang and Cooper (2009) 表明固定统一定价会导致显著收入损失。
 
 \textbf{可替代与纵向差异化产品：} Akcay et al. (2010) 证明最优价格由更高质量产品的总库存决定，且所有性质（PQ, PT, PI, PJ）均成立。Bitran et al. (2006) 的WAL模型引入预算约束，证明了性质PQ。Parlakturk (2012) 是唯一考虑策略型客户的研究，发现产品多样化可减少等待带来的损失，但忽略策略行为会导致次优定价与产品选择。
 
@@ -81,17 +109,19 @@ Kuo and Huang (2012) 研究了两代产品（一展示一隐藏）与不同销�
 
 \subsection{竞争模型}\label{models-with-competition}
 
-价格竞争是经济学研究的核心领域，始于 Bertrand (1883) 的同质产品双寡头模型。收益管理背景下的价格竞争问题关注有限库存和多期动态定价。Dudey (1992) 是该领域的开创性研究，证明了纯策略均衡的存在性。
+价格竞争是经济学研究的核心领域，始于 Bertrand (1883) 的同质产品双寡头模型。收益管理的价格竞争问题关注有限库存和多期动态定价。Dudey (1992) 是该领域的开创性研究，证明了纯策略均衡的存在性。这类问题通常分为两类：
+\begin{itemize}
+	\item 同质产品：完全竞争，顾客仅从最低价公司购买
+	\item 差异化产品：不完全竞争，需求受价格、产品属性及顾客偏好共同影响
+\end{itemize}
 
-此类问题通常分为两类：同质产品（完全竞争，顾客仅从最低价公司购买）和差异化产品（不完全竞争，需求受价格、产品属性及顾客偏好共同影响）。其他重要特征包括顾客类型（短视/战略型）、定价策略（应变式/预先公布式）及市场结构（双寡头/寡头）。
-
-\subsubsection{主要发现与管理启示}\label{main-findings-and-managerial-insights}
+以及其他重要特征：顾客类型（短视/战略型）、定价策略（应变/预先公布）、市场结构（双寡头/寡头）。
 
 \textbf{市场响应假说：} Cooper et al. (2013) 表明，垄断模型参数包含竞争影响的假说仅在特殊情况下成立。
 
-\textbf{竞争的影响：} 竞争通常驱使价格和利润下降 (Martin et al. 2011, Mookherjee and Friesz 2008, Xu and Hopp 2006)。但 Anderson and Schneider (2007) 发现存在搜索成本时，双寡头价格更高（但利润仍低于垄断）。竞争可能导致定价低于边际成本 (Dudey 1992, Martinez-de-Albeniz and Talluri 2011) 或引发过度囤货 (Xu and Hopp 2006)。垄断环境中的性质PT在竞争下通常不成立 (Lin and Sibdari 2009)。
+\textbf{竞争的影响：} 竞争使价格和利润下降 (Martin et al. 2011, Mookherjee and Friesz 2008, Xu and Hopp 2006)。但 Anderson and Schneider (2007) 发现存在搜索成本时，双寡头价格更高，但利润仍低于垄断。竞争可能导致定价低于边际成本 (Dudey 1992, Martinez-de-Albeniz and Talluri 2011) 或引发过度囤货 (Xu and Hopp 2006)。垄断环境中的性质 PT 在竞争下通常不成立 (Lin and Sibdari 2009)。
 
-\textbf{定价策略：} 在竞争环境中，应变式定价不一定优于预先公布定价 (Dasci and Karakul 2009)。其优势取决于竞争水平 (Xu and Hopp 2006) 和库存水平 (Dasci and Karakul 2009)。Liu and Zhang (2013) 发现承诺静态定价常使双寡头双方受益。
+\textbf{定价策略：} 在竞争环境中，应变定价不一定优于预先公布定价 (Dasci and Karakul 2009)。其优势取决于竞争水平 (Xu and Hopp 2006) 和库存水平 (Dasci and Karakul 2009)。Liu and Zhang (2013) 发现承诺静态定价常使双寡头双方受益。
 
 \textbf{战略顾客行为：} 战略行为会降低公司收入，且提供低质量产品的公司损失更大 (Levin et al. 2009, Liu and Zhang 2013)。其影响随竞争水平提高而增加 (Levin et al. 2009)。
 
@@ -107,27 +137,37 @@ Kuo and Huang (2012) 研究了两代产品（一展示一隐藏）与不同销�
 
 \subsection{需求信息有限的模型}\label{models-with-limited-demand-information}
 
-现有文献假设需求函数形式或参数已知。现实中，需求信息通常有限，分为非参数设定（需求函数形式未知）和参数设定（函数形式已知但参数未知）。解决此类问题主要有两种方法：主动需求学习（探索-利用权衡）和鲁棒优化（优化最坏情况性能）。参数问题多采用需求学习方法，而非参数问题多用鲁棒方法。
+大多文献假设需求函数形式或参数已知。但是在现实中，需求信息通常有限，问题分为
+\begin{itemize}
+	\item 非参数设定：需求函数形式未知，多用鲁棒方法
+	\item 参数设定：函数形式已知但参数未知，采用学习方法
+\end{itemize}
 
-\subsubsection{鲁棒优化方法}\label{robust-optimization-approaches}
+解决方案对应为：
+\begin{itemize}
+	\item 主动需求学习：探索-利用权衡
+	\item 鲁棒优化：优化最坏情况性能）
+\end{itemize}
+
+\subsubsection{鲁棒优化}\label{robust-optimization-approaches}
 
 该方法旨在最坏需求情景下优化性能（如最小收益、最小遗憾）。Lim and Shanthikumar (2007) 与 Cohen et al. (2012) 针对单产品问题提出，前者使用相对熵刻画需求率不确定性，后者基于有限样本提供性能保证。Lim et al. (2008) 将单产品鲁棒方法扩展至多产品场景。Chen and Chen (2014) 针对两种可替代产品，使用边界定义不确定性集并提出了鲁棒框架。Perakis and Sood (2006) 研究了寡头垄断下的差异化产品，证明了均衡策略的存在性，并表明需求敏感性低时价格较高。
 
-\subsubsection{需求学习方法}\label{demand-learning-approaches}
+\subsubsection{需求学习}\label{demand-learning-approaches}
 
 该方法通过价格实验（探索）主动学习需求信息，以优化未来收益（利用），需权衡两者。
 
 \textbf{参数问题：}
-多数研究假设时不变需求函数，其未知参数通过销售历史更新。典型方法包括：
+大多数研究假设时不变需求函数，未知参数通过销售历史更新，经典方法有：
 \begin{itemize}
 	\item \textbf{贝叶斯更新：} 需未知参数的先验分布。Lobo and Boyd (2003), Cope (2007), Harrison et al. (2012) 研究了无限库存问题，表明主动探索（如价格抖动）能提升收益。Lin (2006), Araman and Caldentey (2009), Farias and Van Roy (2010), Sen and Zhang (2009) 研究了有限库存问题，提出了近似策略并证明其有效性。Aviv and Pazgal (2005), Levina et al. (2009), Gallego and Talebian (2012) 分别研究了时变需求、战略顾客和多产品等更复杂场景。
-	\item \textbf{最大似然估计：} 无需先验。Carvalho and Puterman (2005) 表明一步前瞻策略优于短视策略。Broder and Rusmevichientong (2012) 构建了强制探索策略以实现最优遗憾阶。den Boer and Zwart (2011, 2014) 研究了确定性等价定价的收敛性，发现有限库存因其自然价格分散而利于学习。
+	\item \textbf{最大似然估计：} 无需先验。Carvalho and Puterman (2005) 表明一步前瞻策略优于短视策略。Broder and Rusmevichientong (2012) 构建了强制探索策略以实现最优遗憾。den Boer and Zwart (2011, 2014) 研究了确定性等价定价的收敛性，发现有限库存因其自然价格分散而利于学习。
 	\item \textbf{线性最小二乘法：} Bertsimas and Perakis (2006) 表明其DP近似优于短视策略。Keskin and Zeevi (2014) 提出了渐近最优的半短视策略。Keskin and Zeevi (2013) 研究了时变参数，提出了折扣旧观测的加权最小二乘法。Besbes and Zeevi (2014) 研究了模型误设，发现其策略性能仍较好。Bertsimas and Perakis (2006) 与 Kachani et al. (2007) 将其扩展至竞争环境。
 	\item \textbf{简单经验估计：} Besbes and Zeevi (2009) 与 Wang et al. (2014) 将时间分为探索与利用阶段，后者算法遗憾更小。Besbes and Zeevi (2011) 研究了需求函数突变点检测。Chen and Farias (2013) 研究了时变到达率，其策略不依赖主动实验。
 \end{itemize}
 
 \textbf{非参数问题：}
-仅少数研究涉及。Besbes and Zeevi (2009) 与 Wang et al. (2014) 研究了需求函数形式完全未知的情况，提出了渐近最优算法，后者遗憾界更优。Eren and Maglaras (2010) 研究了无限库存问题，以最坏情况竞争比为目标，表明即使少量价格实验也能显著提升收益。Besbes and Zeevi (2012) 研究了多产品问题，为离散和连续价格情况分别提出了渐近最优策略。
+少数研究涉及。Besbes and Zeevi (2009) 与 Wang et al. (2014) 研究了需求函数形式完全未知的情况，提出了渐近最优算法，后者遗憾界更优。Eren and Maglaras (2010) 研究了无限库存问题，以最坏情况竞争比为目标，表明即使少量价格实验也能显著提升收益。Besbes and Zeevi (2012) 研究了多产品问题，为离散和连续价格情况分别提出了渐近最优策略。
 
 
 \subsection{未来研究方向}\label{future-research-directions}
@@ -182,9 +222,9 @@ Kuo and Huang (2012) 研究了两代产品（一展示一隐藏）与不同销�
 
 已有若干关于动态定价与学习的综述文献。Araman and Caldentey [2] 以及 Aviv and Vulcano [3, Section 4] 详细回顾了OR/MS领域的近期研究；Christ [4, Section 3.2.1] 对部分需求学习研究进行了讨论；Chen and Chen [5] 总结了多产品定价、竞争环境及有限需求信息下的定价研究。本综述通过更广的覆盖范围对这些进行补充，虽以OR/MS文献为主，但也包含计算机科学、市场营销、经济学和计量经济学的相关成果。
 
-内容。本文回顾需求不确定性下的动态定价研究，并将其置于更广泛的动态定价文献背景中。我们未涵盖所有动态定价主题，对此可参考 Bitran and Caldentey [6], Elmaghraby and Keshinocak [7], Talluri and van Ryzin [8], Phillips [9], Heching and Leung [10], Gonsch et al.~[11], Rao [12], Chenavaz et al.~[13], Deksnyte and Lydeka [14] 及 Ozer and Phillips [15]。我们聚焦于以销售价格为控制变量的研究，不讨论基于能力的收益管理 [8]、报童/库存控制中的学习、机制设计 [16,17] 或不完全信息下的拍卖理论（参见 [18,19]）。大多数研究从在线零售商视角出发，不涉及社会福利优化 [20,21]，也不深入探讨特定应用场景如排队系统定价 [22]、道路定价 [23–25] 或电力定价 [26,27] 等。同时，我们未涵盖近期基于销售数据解释定价策略的实证研究（如 [28] 关于机票定价，Sweeting [29] 关于棒球门票，Huang et al.~[30] 关于二手车定价）。本文重点为卖家学习需求函数的研究，而非买家（或卖家）学习产品质量的研究 [31–37]。
+内容。本文回顾\textbf{需求不确定性下的动态定价研究}，并将其置于更广泛的动态定价文献背景中。我们未涵盖所有动态定价主题，对此可参考 Bitran and Caldentey [6], Elmaghraby and Keshinocak [7], Talluri and van Ryzin [8], Phillips [9], Heching and Leung [10], Gonsch et al.~[11], Rao [12], Chenavaz et al.~[13], Deksnyte and Lydeka [14] 及 Ozer and Phillips [15]。我们聚焦于以销售价格为控制变量的研究，不讨论基于能力的收益管理 [8]、报童/库存控制中的学习、机制设计 [16,17] 或不完全信息下的拍卖理论（参见 [18,19]）。大多数研究从在线零售商视角出发，不涉及社会福利优化 [20,21]，也不深入探讨特定应用场景如排队系统定价 [22]、道路定价 [23–25] 或电力定价 [26,27] 等。同时，我们未涵盖近期基于销售数据解释定价策略的实证研究（如 [28] 关于机票定价，Sweeting [29] 关于棒球门票，Huang et al.~[30] 关于二手车定价）。本文重点为\textbf{卖家学习需求函数的研究}，而非买家（或卖家）学习产品质量的研究 [31–37]。
 
-方法论。我们使用 Google Scholar 检索了截至2014年10月1日的相关文献，排除重复版本或与期刊论文大量重叠的会议论文。通过引用追踪及主要作者个人网站进行补充检索，力求全面覆盖动态定价与学习文献；其他相关领域如需求估计或完全信息下的动态定价，则仅包含关键论文与综述。
+通过引用追踪及主要作者个人网站进行补充检索，力求全面覆盖动态定价与学习文献；其他相关领域如需求估计或完全信息下的动态定价，则仅包含关键论文与综述。
 
 论文结构。第2节回顾定价与需求估计的早期工作及其应用局限；第3节概述动态定价的一般文献与发展；第4节聚焦动态定价与学习的专门研究；第5节讨论与其他领域的联系；第6节展望新研究方向。核心部分为第4节，其余起支撑作用。
 
@@ -213,11 +253,11 @@ Cournot [38] 最早使用数学函数描述价格与需求关系，并求解最�
 本节简要讨论动态定价的主要研究方向及关键文献，以为第4节中带学习的动态定价提供背景。更全面的综述可参考书籍 Talluri and van Ryzin [8]、Phillips [9]、Rao [12]、Ozer and Phillips [15]，以及综述文章 Bitran and Caldentey [6]、Elmaghraby and Keskinocak [7]、Heching and Leung [10]、Gonsch et al. [11]、Seetharaman [64]、Chenavaz et al. [13] 和 Deksnyte and Lydeka [14]。
 
 垄断企业的动态定价模型主要分为两类：
-• 需求函数随时间动态变化的模型；
 
-• 需求函数静态但定价动态由库存水平引起的模型。
-
-第一类模型（第3.1节）中，需求随环境变化，如受价格导数、库存、累计销量或定价历史等因素影响。第二类模型（第3.2节）中，需求函数本身不变，价格动态由库存边际价值变化驱动。部分研究同时涉及两类因素，也在第3.2节中综述。
+\begin{itemize}
+	\item  需求函数随时间动态变化的模型。需求随环境变化，如受价格导数、库存、累计销量或定价历史等因素影响。
+	\item 需求函数静态但定价动态由库存水平引起的模型。需求函数本身不变，价格动态由库存边际价值变化驱动。
+\end{itemize}
 
 \subsubsection{具有动态需求的动态定价}\label{dynamic-pricing-with-dynamic-demand}
 
@@ -375,118 +415,3 @@ Lariviere and Porteus {[}282{]} 研究了制造商-零售商供应链中的贝�
 \subsection{结论}\label{conclusion}
 
 不完全信息下的动态定价近年来受到多学科关注。运筹学、经济学与计算机科学领域从不同角度研究该问题，虽目标各异但方法存在大量重叠。本综述旨在系统梳理现有成果，并为后续研究提供参考。
-
-
-\section{Dynamic Pricing: Trends, Challenges and New Frontiers}
-
-\subsection{引言}\label{i.-introduction}
-
-定价是一个复杂的过程，受到消费者行为、需求不确定性、库存水平和竞争等多重因素影响。传统定价基于生产成本与市场动态，而动态定价则通过算法根据市场与客户数据实时调整价格，以实现收入最大化。该策略已广泛应用于酒店、零售等诸多行业，其核心在于利用技术（尤其是数字解决方案）平衡供需：在需求低迷时降低价格，在高需求时抬高价格[3][4][5][6]。
-
-然而，动态定价的采用也引发了关于公平性、透明度和潜在歧视的伦理担忧[7]。其关键技术包括需求建模、客户分类（如短视型或战略型），并需考虑不完全竞争和价格敏感需求等假设[2]。动态定价机制多样，涵盖收益管理、基于需求的定价、拍卖、团购和谈判等[8]。互联网与电子商务的发展为实施更精细的定价策略提供了可能[2][6]。
-
-本文探讨动态定价在电子商务、旅游、能源、电动汽车充电、云计算和网约车等关键领域的影响，并深入分析其核心决定因素（如竞争、需求、库存和价格歧视）及常用策略与算法（包括随机优化、线性规划、机器学习和人工智能）。最后，本文展望了未来研究方向，以进一步完善模型、应对挑战并整合新兴技术。
-
-\subsection{研究问题}\label{ii.-research-questions}
-
-本文旨在综述已有研究，并在当代动态定价背景下探讨以下问题：
-
-\begin{enumerate}
-	\def\labelenumi{\arabic{enumi}.}
-	\item 哪些行业因动态定价而经历了显著影响？
-	\item 动态定价背后的主要决定因素是什么？
-	\item 可用于应对动态定价挑战的关键策略和算法有哪些？
-	\item 考虑到当前的技术水平，动态定价领域正在出现哪些未来的研究途径？
-\end{enumerate}
-
-\subsection{相关工作}\label{iii.-related-works}
-
-动态定价是一个多学科领域，融合了数学、经济学、运筹学与计算机科学等学科。以下综述文章提供了关键见解：
-
-Narahari et al. [10] 强调了复杂数学模型对最大化数字经济中动态定价效益的必要性，回顾了基于库存、数据驱动、拍卖和机器学习等方法，并指出强化学习在电子商务中的应用价值。A.V.D. Boer [11] 提供了跨运筹学、管理科学、市场营销、经济学和计算机科学的广泛概述，指出了未来的研究方向。Karol Stasinski [12] 讨论了市场信息在最优定价策略中的重要性，揭示了最新研究趋势。Dzulfikar et al. [13] 在电子商务个性化背景下，强调了个性化对提升销售与客户互动的潜力，并将个性化特征分为架构性、关系性、工具性和商业性四个维度。M. Neubert [9] 的系统综述综合了50多篇文章，探讨了动态定价对客户感知和行为的影响，并提出了未来研究方向。
-
-\subsection{动态定价的目标}\label{iv.-goals-of-dynamic-pricing}
-
-企业采用动态定价可能追求以下一个或多个目标：
-\begin{itemize}
-	\item 利润最大化：根据需求与竞争调整价格（如在需求高峰期提价）；
-	\item 收入增长：通过策略（如非高峰时段折扣）吸引更多客户；
-	\item 提升客户满意度：提供更符合产品价值的价格[2]；
-	\item 库存管理：根据库存水平调整价格，防止过剩或不足；
-	\item 竞争应对：通过更低价格或定向折扣与对手竞争[5][6]。
-\end{itemize}
-
-\subsection{跨行业的动态定价}\label{v.-dynamic-pricing-across-industries}
-
-动态定价已重塑多个行业的定价策略与消费者互动方式。本节探讨其关键应用领域。
-
-\subsubsection{电子商务}\label{a.-e-commerce}
-
-动态定价是电子商务的核心工具，用于根据需求波动、供应水平、库存、产品质量、客户评论及竞争价格持续调整产品价格。Liu和Huo[14]研究了电子市场中易腐商品的动态定价，采用非线性模型与仿真。Yu等人[15]探讨了战略消费者对双渠道模式定价的影响。此外，实时定价策略的开发[16]及云原生框架的设计[17]也取得了显著进展。
-
-\subsubsection{航空、旅游和酒店}\label{b.-airline-travel-and-hotels}
-
-动态定价优化了航班、酒店等旅行产品价格，综合考虑需求、供应限制及旅客偏好，从而提高盈利能力与客户满意度。Williams分析了美国航空票价在垄断市场中的波动[19]。Guizzardi等人[20]利用在线旅行社数据预测旅游需求。Ye等人[21]评估了COVID-19等事件对酒店定价与收入的影响。
-
-\subsubsection{能源与电力}\label{c.-energy-and-electricity}
-
-该领域通过动态定价优化能源消耗与发电价格，依据需求模式、供应波动及网络约束等因素。Stute和Kuhnbach[22]将家庭用户纳入能源管理系统以降低成本。Anton等人[23]探讨了参考定价下价格与质量的关系。Chen等人[24]提出了改善市场效率与降低峰值需求的模型。
-
-\subsubsection{电动汽车充电}\label{d.-electric-vehicle-charging}
-
-动态定价根据需求与可用性实时调整充电服务费，鼓励非高峰充电或向电网放电。策略包括分时电价、实时电价等。Chen和Folly[25]提出了减轻设备过载的动态定价模型。Aljafari等人[26]利用多智能体深度神经网络优化充电站管理。Xu等人[27]基于负载状况与驾驶员不满意函数调整服务费。
-
-\subsubsection{云服务定价}\label{e.-cloud-service-pricing}
-
-云计算中的动态定价优化资源利用与收入，采用拍卖、博弈论及优化等方法。Javed等人[28]提出了基于供需拍卖的云市场模型。Li, Wang和Wang[29]在AWS spot实例中设计了保证最差情况收入的鲁棒定价机制。
-
-\subsubsection{网约车服务}\label{f.-taxi-services-e.g.-uber-ola-lyft}
-
-网约车平台依据实时供需动态调整车费，以提高收入、服务质量和减少等待时间。Shi, Cao和Luo[30]利用深度强化学习进行区域定价。Yan等人[31]将动态定价与等待时间优化结合。Guan等人[32]采用马尔可夫决策过程调节预计等待时间。
-
-\subsection{动态定价的影响因素}\label{vi.-factors-of-dynamic-pricing}
-
-动态定价策略依赖于四个关键因素：
-
-\subsubsection{竞争价格}\label{a.-competition-price}
-
-竞争环境中，消费者选择行为与竞争对手行动严重影响定价。Fisher et al.~[33] 通过现场实验开发了基于消费者行为与竞争的最佳响应策略。Brustle et al.~[34] 指出竞争对手行为与市场波动带来高度复杂性。Faehnle and Guidolin~[35] 使用向量自回归过程分析价格相互依赖性。
-
-\subsubsection{需求因素}\label{b.-the-demand-factor}
-
-需求受价格、时间、地点、市场细分、季节性与消费者行为等多因素影响。Guizzardi et al.~[20] 利用在线旅行社数据预测旅游需求。Chen and Folly~[25] 分析了电动汽车充电数据以改进需求预测。Keskin et al~[36] 利用库存数据对易腐产品进行联合定价与库存决策。
-
-\subsubsection{库存因素}\label{c.-the-inventory-factor}
-
-库存管理对易腐商品尤为重要。Liu and Huo~[14] 研究了电商中易腐品的动态定价。Keskin et al.~[36] 提出了数据驱动的联合定价与库存决策框架，以降低成本与浪费。
-
-\subsubsection{价格歧视}\label{d.-price-discrimination}
-
-在双头垄断等市场中，价格歧视可提高利润。Li et al.~[37] 研究了霍特林模型中的动态定价与价格歧视。Kremer, Martin, and Ovchinnikov~[38] 强调了考虑战略消费者行为的重要性。
-
-\subsection{策略与算法}\label{vii.-strategies-and-algorithm}
-
-动态定价策略主要包括优化策略与学习策略：
-
-随机优化与线性规划属于经典优化策略。Rios and Vera~[39] 提出了零售业中管理季节性产品的随机优化模型。Alzhouri et al.~[40] 将马尔可夫决策过程与线性规划结合用于云资源定价。
-
-机器学习与人工智能构成自适应学习策略。Yin and Han~[41] 提出了需求函数预测的去偏方法。Chen and Folly~[25] 回顾了AI在电动汽车调度中的应用。Saharan et al.~[42] 讨论了基于ML的路内停车定价与分配。Shi, Cao, and Luo~[30] 利用深度强化学习优化网约车定价。Keskin et al.~[36] 开发了基于机器学习的个性化定价，最小化收入损失。Lyu et al.~[43] 采用强化学习优化边缘计算服务的收入与资源分配。Shi and Xia~[44] 比较了DQN与SAC算法在竞争市场中的性能。
-
-\subsection{未来研究方向}\label{viii.-potential-future-work}
-
-动态定价的未来研究可从以下方向展开：
-
-\begin{itemize}
-	\item 交通运输与旅游：改进高速铁路定价模型，融入旅行时间、舒适度等因素[45]；利用数据科学与机器学习增强航空需求分析与定价[46]。
-	\item 公用事业：开发基于非线性需求的停车定价机制[42]；研究医疗保健等行业的节能动态定价与负载调度[47][48]。
-	\item 在线平台与众包：探索在线评论与社会影响力对消费者行为的影响[49][50]。
-	\item 工业园区与能源服务：增强用户行为建模与价格尖峰检测[51]；改进基于博弈论的综合能源定价[52]。
-	\item 自动化机器学习：开发更先进的深度强化学习流程用于动态定价[53]；利用多源数据估计客户偏好[54]。
-	\item 新兴技术：为5G/6G与快充站设计动态定价模型[55]；结合边缘计算、物联网与机器学习实现实时定价[56]。
-	\item 实时定价与需求响应：构建处理不确定性并提供价格预警的模型[16][57]。
-	\item 高级算法：开发能快速适应市场条件变化的学习算法[17][58]。
-\end{itemize}
-
-\subsection{结论}\label{ix.-conclusion}
-
-本文系统探讨了动态定价的行业应用、影响因素、策略算法及未来方向。动态定价通过实时调整价格显著影响收入、客户满意度与运营效率。其核心因素包括竞争、需求、库存与价格歧视；主要策略涵盖随机优化、机器学习与人工智能。未来研究可在交通运输、能源、在线平台、工业园、自动化机器学习、新兴技术及实时定价等领域进一步深化，推动动态定价理论与应用的发展。
